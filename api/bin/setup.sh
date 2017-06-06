@@ -23,11 +23,11 @@ mkdir vendor
 # navigate to vendor directory
 cd vendor
 
-# clone sqlayr repo
-git clone https://github.com/digice/sqlayr.git
-
 # clone paqure repo
 git clone https://github.com/digice/paqure.git
+
+# run paqure setup
+./paqure/bin/setup.sh
 
 # navigate out of vendor directory
 cd ../
