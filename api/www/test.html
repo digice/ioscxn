@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Roderic Linguri <linguri@digices.com">
+  <meta name="description" content="">
+  <title>Test iOSCxn</title>
+</head>
+<body style="font-family: 'Helvetica Neue',Arial,sans-serif;">
+<div style="text-align: center;">
+  <h1>Test iOSCxn</h1>
+  <hr style="width: 50%;">
+  <h3>Test Create</h3>
+  <form action="request.php" method="POST">
+    <input type="hidden" name="object" value="test">
+    <input type="hidden" name="action" value="create">
+    <span style="font-size: 9px;">FIRST&nbsp;NAME:</span>&nbsp;
+    <input type="text" name="first" value="Test"><br>
+    <span style="font-size: 9px;">LAST&nbsp;NAME:</span>&nbsp;
+    <input type="text" name="last" value="Testerson"><br>
+    <input type="submit" name="submit" value="Create">
+  </form>
+  <br>
+  <hr style="width: 50%;">
+  <h3>Test Read</h3>
+  <form action="request.php" method="POST">
+    <input type="hidden" name="object" value="test">
+    <input type="hidden" name="action" value="read">
+    <span style="font-size: 9px;">ID:</span>&nbsp;
+    <input type="text" name="id" value="1"><br>
+    <input type="submit" name="submit" value="Read">
+  </form>
+  <br>
+  <hr style="width: 50%;">
+  <h3>Test Update</h3>
+  <form action="request.php" method="POST">
+    <input type="hidden" name="object" value="test">
+    <input type="hidden" name="action" value="update">
+    <span style="font-size: 9px;">ID:</span>&nbsp;
+    <input type="text" name="id" value="1"><br>
+    <span style="font-size: 9px;">FIRST&nbsp;NAME:</span>&nbsp;
+    <input type="text" name="first" value="Testy"><br>
+    <input type="submit" name="submit" value="Update">
+  </form>
+  <br>
+  <hr style="width: 50%;">
+  <h3>Test Delete</h3>
+  <form action="request.php" method="POST">
+    <input type="hidden" name="object" value="test">
+    <input type="hidden" name="action" value="delete">
+    <span style="font-size: 9px;">ID:</span>&nbsp;
+    <input type="text" name="id" value="1"><br>
+    <input type="submit" name="submit" value="Delete">
+  </form>
+  <br>
+</div>
+</body>
+</html>
