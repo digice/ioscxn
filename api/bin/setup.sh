@@ -1,9 +1,15 @@
 #!/bin/sh
 
-PACKAGE="iOSConnect"
+PACKAGE="iOSCxn"
 
-# save path to present working directory
-PTH="$(pwd)"
+STARTDIR="$(pwd)"
+
+BASEDIR=$(dirname "$0")
+
+PTH=$(dirname $BASEDIR)
+
+# navigate to project dir
+cd $PTH
 
 # dynamically determine package name
 NAMESPACE="${PWD##*/}"
@@ -17,10 +23,10 @@ echo "The full path to the application is $PTH."
 echo "Choose a password for the new MySQL user \"$NAMESPACE\":"
 read PASSWORD
 
-# create project directories
+# create the vendor dir
 mkdir vendor
 
-# navigate to vendor directory
+# navigate into vendor dir
 cd vendor
 
 # clone paqure repo
@@ -44,5 +50,5 @@ echo "Enter the password for the mysql user \"root\":"
 mysql -u root -p < $PTH/bin/create_db.sql
 
 # return to starting directory
-cd $PTH
+cd $STARTDIR
 
