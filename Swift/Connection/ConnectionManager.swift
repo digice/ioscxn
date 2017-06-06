@@ -73,7 +73,7 @@ class ConnectionManager {
           // DEBUG
           dump(json)
           
-          if let metadata = json["metadata"] as? [String:Any] {
+          if let metadata = json["meta"] as? [String:Any] {
             var responseData: [Any]? = nil
             if let result = json["data"] as? [Any] {
               responseData = result
