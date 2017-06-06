@@ -3,7 +3,7 @@
 PACKAGE="iOSConnect"
 
 # save path to present working directory
-PATH="$(pwd)"
+PTH="$(pwd)"
 
 # dynamically determine package name
 NAMESPACE="${PWD##*/}"
@@ -11,7 +11,7 @@ NAMESPACE="${PWD##*/}"
 # message
 echo "Welcome to the iOSCxn setup script."
 echo "Your application name, database name, and user name will be \"$NAMESPACE\"."
-echo "The full path to the application is $PATH."
+echo "The full path to the application is $PTH."
 
 # ask for password
 echo "Choose a password for the new MySQL user \"$NAMESPACE\":"
@@ -41,8 +41,8 @@ printf "CREATE USER '$NAMESPACE'@'%%' IDENTIFIED WITH mysql_native_password AS '
 # create the database
 echo "Enter the password for the mysql user \"root\":"
 
-mysql -u root -p < $PATH/bin/create_db.sql
+mysql -u root -p < $PTH/bin/create_db.sql
 
 # return to starting directory
-cd $PATH
+cd $PTH
 
