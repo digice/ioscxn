@@ -1,6 +1,6 @@
 //
 //  ConnectionManager.swift
-//  PaQuRe
+//  iOSCxn
 //
 //  Created by Roderic Linguri.
 //  Copyright © 2017 Digices LLC. All rights reserved.
