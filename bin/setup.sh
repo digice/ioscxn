@@ -4,7 +4,7 @@ PACKAGE="iOSCxn"
 
 STARTDIR="$(pwd)"
 
-BASEDIR=$(dirname "$0")
+BASEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 PTH=$(dirname $BASEDIR)
 
