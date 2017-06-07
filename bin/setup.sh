@@ -35,8 +35,8 @@ git clone https://github.com/digice/paqure.git
 # run paqure setup
 ./paqure/bin/setup.sh
 
-# navigate out of vendor directory
-cd ../
+# navigate back to project directory
+cd $PTH
 
 # build the database class
 printf "<?php\n\n/**\n * @package   iOSCxn\n * @author    Roderic Linguri <linguri@digices.com>\n * @copyright 2017 Digices LLC\n * @license   https://digices.com/license/mit.txt\n **/\n\nnamespace ioscxn;\n\nclass Database extends \sqlayr\Database\n{\n  /** @property Dbo instance **/\n  protected static \$shared;\n\n  /** @method Dbo getter **/\n  public static function shared()\n  {\n    if (!isset(self::\$shared)) {\n      self::\$shared = new self();\n    }\n    return self::\$shared;\n  } // ./shared\n\n  /** @method constructor **/\n  public function __construct()\n  {\n    \$this->host = 'localhost';\n    \$this->name = '$NAMESPACE';\n    \$this->user = '$NAMESPACE';\n    \$this->pass = '$PASSWORD';\n    parent::__construct();\n  } // ./construct\n\n} // ./Database\n" > "$PTH/lib/database.php"
