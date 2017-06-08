@@ -21,16 +21,32 @@ class App extends \paqure\Query
     $reply->meta->object = $this->table;
     $reply->meta->action = $this->method;
 
-    switch ($this->table) {
-      case 'test';
-        $class = \ioscxn\Test::shared();
-        $method = $this->method;
-        $class->$method();
-        break;
-      default:
-        break;
-    }
-    
+    $parse = \paqure\Parse::shared();
+
+    if ($api_key = $parse->post->params['api_key']) {
+
+      if ($api_key == API_KEY) {
+        switch ($this->table) {
+          case 'test';
+            $class = \ioscxn\Test::shared();
+            $method = $this->method;
+            $class->$method();
+            break;
+          default:
+            break;
+        }
+      } // ./API Key match
+
+      else {
+        $reply->meta->message = 'Invalid API Key.';
+      } // ./API Key mismatch
+
+    } // ./API Key was provided
+
+    else {
+      $reply->meta->message = 'API Key is required.';
+    } // ./API Key was not provided
+
     header('Content-Type: application/json');
     echo json_encode($reply, JSON_PRETTY_PRINT);
   
