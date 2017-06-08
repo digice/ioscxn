@@ -16,4 +16,4 @@
 # ln -s /Users/username/Developer/ioscxn/www /Library/WebServer/Documents/ioscxn
 
 # or use relative path
-# ln -s ../../../Users/digices/Developer/ioscxn/www /Library/WebServer/Documents/ioscxn
+# ln -s ../../../Users/username/Developer/ioscxn/www /Library/WebServer/Documents/ioscxn
