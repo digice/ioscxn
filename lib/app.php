@@ -32,7 +32,7 @@ class App extends \paqure\Query
     }
     
     header('Content-Type: application/json');
-    echo json_encode($reply);
+    echo json_encode($reply, JSON_PRETTY_PRINT);
   
   } // ./construct
 
