@@ -10,6 +10,14 @@ _API Client and Server for iOS in Swift and PHP_
 
 3. Create your Xcode project and copy the files within the `./Swift` directory into the project navigator.
 
-4. Modify the URL String in `./Swift/Connection/Connection.swift` to reflect the url to `request.php`.
+4. Modify the URL String in `./Swift/Connection/Connection.swift` to reflect the url to `request.php`. If your web server does not support the HTTPS protocol, you'll need to edit the Info.plist file and add the following tags:
 
-5. In the Xcode Project settings, under General->Deployment Info, set the Main Interface to "Test".
+```XML
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+```
+
+5. In the Xcode Project settings, under General->Deployment Info, set the Main Interface to "Test" to test the connection.
