@@ -22,7 +22,7 @@ class Connection: NSObject, NSCoding {
   
   // Init
   override init() {
-    self.url = "https://www.mydomain.com/api/index.php"
+    self.url = "http://localhost/ioscxn/request.php"
     self.key = "9326367bd624dcefd9467db36172c007"
     self.method = "POST"
     super.init()

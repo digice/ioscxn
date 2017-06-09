@@ -139,6 +139,9 @@ class TestController: UIViewController, UITextFieldDelegate, TestManagerDelegate
     super.awakeFromNib()
     self.manager.delegate = self
     self.title = "Test Connection"
+    let tabBar = self.navigationController?.tabBarItem
+    tabBar?.image = UIImage(named: "Test_30pt")
+    tabBar?.title = "Test"
   } // ./awakeFromNib
 
   override func viewDidLoad() {

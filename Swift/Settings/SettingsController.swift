@@ -15,6 +15,9 @@ class SettingsController: UITableViewController {
   override func awakeFromNib() {
     super.awakeFromNib()
     self.title = "Settings"
+    let tabBar = self.navigationController?.tabBarItem
+    tabBar?.image = UIImage(named: "Settings_30pt")
+    tabBar?.title = "Settings"
   }
 
   override func viewDidLoad() {

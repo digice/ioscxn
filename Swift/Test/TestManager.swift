@@ -33,7 +33,6 @@ class TestManager: ConnectionManagerDelegate {
   } // ./init
 
   func sendCreateRequest() {
-    self.message = ""
     if let object = self.object {
       if let first = object.first {
         if let last = object.last {
