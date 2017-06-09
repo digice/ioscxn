@@ -2,6 +2,11 @@
 
 _API Client and Server for iOS in Swift and PHP_
 
+- Requirements: WebServer with PHP 5.6+ & MySQL, Mac with Xcode 8
+- Dependencies: PaQuRe https://github.com/digice/paqure
+- Author: Roderic Linguri <linguri@digices.com>
+- Copyright: 2017 Digices LLC
+
 ### Getting Started ###
 
 1. After cloning the repository, run `./bin/setup.sh` to clone the dependencies and create the MySQL database.
